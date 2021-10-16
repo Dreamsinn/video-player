@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidio player</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="player">
+            <video id="video" poster="./assets/images/poster.jpg" muted width="400px" src="./assets/videos/lofi.mp4"></video>
+            <!-- poster, para cuando el vidio no haya empezado a reproducirse se vea una imagen -->
+            <h2 class="player-tittle">Música para programar</h2>
+            <div class="player-overlay">
+                <div class="player-actions">
+                    <button class="button" id="backward" aria-label="retroceder 10 segundos" title="retroceder 10 segundos"></button>
+                    <!-- aria-lebel es para cuando inspeciones el boton y vayas a Acessibility Tree se puede ver ese texto, en este caso que hace el boton -->
+                    <!-- title es para cuando mantienes el boton encima de algo se vea ese texto -->
+                    <button class="button" id="play" aria-label="reproducir" title="reproducir"></button>
+                    <button class="button" hidden id="pause" aria-label="pausar" title="pausar"></button>
+                    <button class="button" id="forward" aria-label="retrocedr 10 segundos" title="retrocedr 10 segundos"></button>
+                </div>
+                <div class="player-progress">
+                    <input id="progress" type="range" min="0" value="0" step="1">
+                    <!-- min i max permiten valores negativos, para no hacer una regla de 3 puniendo
+                max 100, y tener que calcuar los segundos, poner el maximo igual a los segundos del vidio
+                y como hasta que no ha cargado los metadatos de este no se saven y estoe es un evento, ponerlos en js
+                value 0 para arrancar en 0
+                step distancia entre paso y paso, con 1 se mueve 100 pasos, con 10, 10 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./javascript./index.js"></script>
+
+</html>
