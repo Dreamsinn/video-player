@@ -13,11 +13,8 @@ body {
 .player video {
     inline-size: 100%;
     aspect-ratio: 16/9;
-    /* interesante!! */
     vertical-align: middle;
-    /* por defecto baseland */
     object-fit: cover;
-    /* se aplica a imagenes, se ensahcha hasta cobrir contenedor, no rescala */
 }
 
 .wrapper {
@@ -29,27 +26,18 @@ body {
     color: white;
     position: absolute;
     inset-block-start: 0;
-    /* inset -> propiedades de position cuando usas modelo logico, en modelo fisico: top, right, bottom, left */
-    /* block cordenada X */
-    /* inline cordenada Y */
-    /* start al principio de X o Y */
-    /* end al final de X o Y */
     inset-inline-start: 20px;
 }
 
 .player-actions {
     position: absolute;
     inset: 0;
-    /* equivale 0 en todas las cordenadas, ergo ocupa todo espacio disponible */
     /* border: 10px solid blue; */
     display: flex;
     justify-content: center;
-    /* centrar hijos eje X */
     align-items: center;
-    /* centrar hijos eje Y */
     /* z-index: 2; */
     gap: 20px;
-    /* separacion entre los elementos */
 }
 
 .player-progress {
@@ -63,16 +51,12 @@ body {
 
 .player-progress input {
     flex: 1;
-    /* para que coja un % del tamaño dentro del contenedor con display:flex, 
-    si se usa eg: .clase div{flex:1;} todos los hijos mismo tamaño
-    si se usa en un solo tag es para que coja todo el tamaño flex: 1 = flex:100%*/
 }
 
 .player-overlay {
     position: absolute;
     inset: 0;
     opacity: 0;
-    /* alternativa a display none; display flex */
     transition: 1s opacity;
 }
 

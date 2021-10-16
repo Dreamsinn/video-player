@@ -1,11 +1,8 @@
 .button {
     inline-size: 32px;
-    /*tamaño horizontal del bloque, diferencia con width?*/
     block-size: 32px;
-    /*tamaño vertical del bloque, diferencia con heigth?*/
     border: none;
     background-color: transparent;
-    /*unset o initial serviria, none no, porque los botenes tiene color por defecto*/
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
